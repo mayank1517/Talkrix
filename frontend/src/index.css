@@ -1,0 +1,896 @@
+@import url("https://fonts.googleapis.com/css2?family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap");
+:root {
+  /* Backgrounds */
+  --bg-main: #1b2420; /* Deep forest green */
+  --bg-dark: #121814; /* Rich black-olive */
+  --bg-light: #2e3b35; /* Slate moss for cards */
+  --bg-active: #3f4f47; /* Muted eucalyptus for active states */
+
+  /* Text Colors */
+  --text-app-name: #cde3d2; /* Soft mint-gray */
+  --text-primary: #dfeee6; /* Gentle off-white */
+  --text-secondary: #aabfb3; /* Muted sage */
+  --text-on-dark: #ffffff; /* Crisp white */
+  --text-accent: #8fbfa3; /* Dusty jade accent */
+  --text-active: #cde3d2; /* Same as app name for consistency */
+
+  /* Accent & UI Elements */
+  --primary-purple: #6a8f7b; /* Desaturated green-teal */
+  --secondary-purple: #8fbfa3; /* Soft minty green */
+  --accent-purple: #b7d3c4; /* Pale seafoam */
+  --highlight: #3c4f45; /* Hover effect with subtle contrast */
+
+  /* Fonts */
+  --font-sub-heading: "Epunda Sans", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --font-heading: "Roboto Slab", serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* for register page */
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+}
+.regCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  background-color: var(--bg-light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registerForm {
+  width: 22rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registerForm h2 {
+  font-family: var(--font-heading);
+  color: var(--text-accent);
+}
+.regFormContainer h1 {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-app-name);
+}
+.regFormContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+
+.registerForm input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--accent-purple);
+  border-radius: 4px;
+}
+
+.registerForm p {
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+
+.registerForm button {
+  background-color: var(--primary-purple);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerForm button:hover {
+  background-color: var(--highlight);
+}
+.registerImg {
+  width: 20rem;
+}
+.registerImg img {
+  width: 100%;
+  height: auto;
+}
+/* Tablet View (≤ 768px) */
+@media (max-width: 768px) {
+  .regCard {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .registerForm {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .registerImg {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .regFormContainer h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile View (≤ 480px) */
+@media (max-width: 480px) {
+  .registerContainer {
+    width: 100%;
+  }
+  .regCard {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .registerForm {
+    width: 100%;
+    padding: 0.5rem;
+    align-items: normal;
+    gap: 0.75rem;
+  }
+
+  .registerForm h2 {
+    font-size: 1.5rem;
+  }
+
+  .regFormContainer h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .registerForm input {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .registerForm button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .registerImg {
+    display: none;
+    max-width: 16rem;
+  }
+}
+
+/* profile complete */
+.profile-complete-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileCompleteCard {
+  background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.profileCompleteCard h1 {
+  font-family: var(--font-heading);
+  color: var(--text-accent);
+  margin-bottom: 1rem;
+}
+.profileCompleteForm {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.proImg {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.proImg img {
+  width: 100%;
+  height: auto;
+}
+.profileCompleteForm input,
+.profileCompleteForm textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--accent-purple);
+  border-radius: 4px;
+}
+.profileCompleteForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.profileCompleteForm button {
+  background-color: var(--primary-purple);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.profileCompleteForm button:hover {
+  background-color: var(--highlight);
+}
+.profileCompleteForm > label {
+  display: block;
+  width: 98%;
+  margin-top: 2rem;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+.Options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.Options > label {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  display: block;
+  width: 50%;
+}
+#gender {
+  flex: 1;
+  padding: 0.5em;
+  border: 1px solid var(--accent-purple);
+  border-radius: 4px;
+}
+#gender option {
+  background-color: var(--bg-main);
+  color: var(--text-secondary);
+  padding: 0.5rem;
+}
+.shuffleBtn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar {
+  width: 250px;
+  height: calc(100% - 3rem);
+  overflow-y: auto;
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-light);
+  padding: 1rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.navbar h2 {
+  font-family: var(--font-heading);
+  color: var(--text-app-name);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: var(--highlight);
+  color: var(--text-active);
+}
+
+.active {
+  background-color: var(--bg-active);
+  color: var(--text-active);
+}
+
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+
+.sidebar-footer img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* layout */
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--bg-light);
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.navbar button {
+  background-color: var(--primary-purple);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.navbar > button:hover {
+  background-color: var(--highlight);
+}
+.userProfile {
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.userProfile img {
+  width: 100%;
+  height: auto;
+}
+.content {
+  width: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.sidebar-container {
+  width: 250px;
+  height: 100vh;
+  background-color: var(--bg-light);
+
+  border-right: 1px solid var(--border-color);
+}
+.navbar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* Home */
+
+.home-page > h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  color: var(--text-accent);
+}
+.suggested-friend-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.friend-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 14rem;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-light);
+}
+.friend-card img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.friend-card p {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+.friend-card button {
+  background-color: var(--primary-purple);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.friend-card button:hover {
+  background-color: var(--highlight);
+}
+.name-in-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.name-in-card h3 {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+.upper-f-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+/* notification */
+.notification-page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.notification-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  color: var(--text-accent);
+}
+.notification-card {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 4px;
+  background-color: var(--bg-light);
+  margin-bottom: 1rem;
+}
+.notification-card p {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+.notification-card button {
+  background-color: var(--primary-purple);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.notification-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+/* Friends */
+.friends-page {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.friends-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  color: var(--text-accent);
+}
+.friends-page ul {
+  list-style: none;
+  padding: 0;
+}
+.friends-page li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.friend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+  height: 4rem;
+  background-color: var(--bg-light);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+}
+.friend-item img {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.friend-item p {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+.friend-item button {
+  background-color: var(--primary-purple);
+  color: white;
+  width: 7rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-right: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.friend-item button:hover {
+  background-color: var(--highlight);
+}
+
+.friend-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification-profile-picture {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-link {
+  color: white;
+  text-decoration: none;
+}
+.chat-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.str-chat__channel {
+  flex: 1;
+  display: flex;
+
+  background-color: var(--bg-main);
+  flex-direction: column;
+}
+.str-chat__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.str-chat__message-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.str-chat__message-input {
+  border-top: 1px solid var(--border-color);
+  padding: 0.5rem;
+  background-color: var(--bg-light);
+}
+@media (max-width: 768px) {
+  .profileCompleteCard {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .profileCompleteCard h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .Options {
+    flex-direction: column;
+    height: auto;
+    gap: 0.5rem;
+  }
+
+  .Options > label {
+    width: 100%;
+    text-align: center;
+  }
+
+  #gender {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileCompleteCard {
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .profileCompleteForm input,
+  .profileCompleteForm textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .profileCompleteForm button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .profileCompleteCard h1 {
+    font-size: 1.6rem;
+  }
+
+  .profileCompleteForm > label {
+    font-size: 0.9rem;
+  }
+
+  .shuffleBtn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Sidebar  */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .sidebar h2 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .sidebar ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .sidebar li {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-footer {
+    display: none; /* Optional: hide on small screens */
+  }
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+.sidebar {
+  transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+@media (max-width: 480px) {
+  .sidebar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar li {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .sidebar h2 {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page > h1,
+  .notification-page h1,
+  .friends-page h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .suggested-friend-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .friend-card {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .friend-card img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .friend-card button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .notification-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .friend-item {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 0.5rem;
+    border-radius: 12px;
+  }
+
+  .friend-item button {
+    width: 100%;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .friend-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page > h1,
+  .notification-page h1,
+  .friends-page h1 {
+    font-size: 1.4rem;
+  }
+
+  .friend-card,
+  .notification-card,
+  .friend-item {
+    padding: 0.75rem;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .friend-card button,
+  .notification-card button,
+  .friend-item button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .friend-card img,
+  .friend-item img,
+  .notification-profile-picture {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .name-in-card h3,
+  .friend-card p,
+  .friend-item p,
+  .notification-card p {
+    font-size: 0.9rem;
+  }
+  .suggested-friend-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+.call-button {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+}
+.call-button > button {
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--primary-color);
+  border: 1px solid var(--border-color);
+  color: var(--primary-purple);
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.call-button:hover {
+  background: darken(var(--primary-color), 5%);
+}
+.call-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 150, 250, 0.5);
+}
